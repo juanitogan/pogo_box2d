@@ -1,5 +1,6 @@
 name: pogo_box2d
 description: Plugin to the Pogo Game Engine that adds support for the Box2D physics engine.
+homepage: https://github.com/juanitogan/pogo_box2d
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -23,8 +24,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  pogo:
-    path: ../pogo/
+  pogo: ^0.2.1
   box2d_flame: ^0.4.6
 
 dev_dependencies:

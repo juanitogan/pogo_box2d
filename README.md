@@ -17,3 +17,19 @@ This does not appear to be even remotely close to how I would build this, so exp
 The whole concept of a box2d's World is mapped to the `Box2DComponent` component; every Body should be a `BodyComponent`, and added directly to the `Box2DComponent`, and not to the game list.
 
 So you can have HUD and other non-physics-related components in your game list, and also as many `Box2DComponents` as you'd like (normally one, I guess), and then add your physical entities to your Components instance. When the Component is updated, it will use box2d physics engine to properly update every child.
+
+## Adding the plugin to your Pogo project
+
+Add the [pogo_box2d package](https://pub.dev/packages/pogo_box2d) dependency to your project's `pubspec.yaml`, for example (check your version number):
+
+```yaml
+dependencies:
+  pogo_box2d: ^0.1.0
+```
+
+A plugin import is required in addition to the Pogo import in each source file that uses it:
+
+```dart
+import 'package:pogo/game_engine.dart';
+import 'package:pogo_box2d/plugin.dart';
+```
